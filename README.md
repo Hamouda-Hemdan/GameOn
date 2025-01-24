@@ -1,2 +1,1 @@
-# Sport-hub
 # GameOn
