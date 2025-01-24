@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Room - GameOn</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" style="cursor: pointer">GameOn</a>
+      </div>
+      <nav>
+        <a href="index.html">Main</a>
+        <a href="profile.html">Profile</a>
+        <a href="created-rooms.html">Created Rooms</a>
+        <a href="#" id="logout-link">Logout</a>
+      </nav>
+    </header>
+    <div class="container">
+      <h2>Create a New Room</h2>
+      <form id="create-room-form">
+        <input type="text" id="room-name" placeholder="Room Name" required />
+        <textarea
+          id="room-description"
+          placeholder="Description"
+          required
+        ></textarea>
+        <input
+          type="number"
+          id="max-players"
+          placeholder="Max Players"
+          required
+        />
+        <input type="datetime-local" id="event-start" required />
+
+        <!-- Sport Dropdown -->
+        <label for="sportId">Sport:</label>
+        <select id="sportId" required>
+          <option value="">Select a Sport</option>
+          <!-- Sports will be dynamically added here -->
+        </select>
+
+        <!-- Stadium Dropdown -->
+        <label for="stadiumId">Stadium:</label>
+        <select id="stadiumId" required>
+          <option value="">Select a Stadium</option>
+          <!-- Stadiums will be dynamically added here -->
+        </select>
+
+        <!-- City Dropdown -->
+        <label for="city">City:</label>
+        <select id="city" required>
+          <option value="Tomsk">Tomsk</option>
+          <option value="Novosibirsk">Novosibirsk</option>
+        </select>
+
+        <button type="submit">Create Room</button>
+      </form>
+    </div>
+    <script src="../js/create-room.js"></script>
+  </body>
+</html>

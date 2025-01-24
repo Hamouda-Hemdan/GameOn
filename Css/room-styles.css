@@ -1,0 +1,354 @@
+/* Room Card Styles */
+.room-card {
+  background: #ffffff; /* White background */
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.room-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+.room-card p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.players-joined {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+}
+
+.players-joined span {
+  color: #4a90e2; /* Soft blue accent color */
+}
+
+.room-joined {
+  color: #ff0000;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* Filter Section Styles */
+#filter-section {
+  background: #ffffff; /* White background */
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 20px;
+}
+
+#filter-section h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#filter-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  border-color: #4a90e2; /* Soft blue accent color */
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.3); /* Subtle glow */
+  outline: none;
+}
+
+#filter-form button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background: #4a90e2; /* Soft blue accent color */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#filter-form button:hover {
+  background: #357abd; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+/* Create Room Button */
+#create-room-button {
+  margin-bottom: 20px;
+  padding: 14px 20px;
+  background: #4a90e2; /* Soft blue accent color */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#create-room-button:hover {
+  background: #357abd; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+/* Join Room Button */
+#join-room-button {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #4a90e2, #357abd); /* Gradient blue */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+#join-room-button:hover {
+  background: linear-gradient(
+    135deg,
+    #357abd,
+    #4a90e2
+  ); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 6px 15px rgba(74, 144, 226, 0.4); /* Stronger shadow on hover */
+}
+
+/* Leave Room Button */
+#leave-room-button {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #ff6f61, #ff4b2b); /* Gradient red */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 111, 97, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+#leave-room-button:hover {
+  background: linear-gradient(
+    135deg,
+    #ff4b2b,
+    #ff6f61
+  ); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 6px 15px rgba(255, 111, 97, 0.4); /* Stronger shadow on hover */
+}
+
+/* Delete Room Button */
+#delete-room-button {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #dc3545, #c82333); /* Gradient red */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+}
+
+#delete-room-button:hover {
+  background: linear-gradient(
+    135deg,
+    #c82333,
+    #dc3545
+  ); /* Reverse gradient on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.4); /* Stronger shadow on hover */
+}
+
+/* Button Container */
+.room-buttons-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.room-buttons-container .button-secondary {
+  background: #6c757d; /* Gray color for secondary button */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.room-buttons-container .button-secondary:hover {
+  background: #5a6268; /* Darker gray on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+.room-buttons {
+  display: flex; /* Use Flexbox for horizontal alignment */
+  align-items: center; /* Vertically center the buttons */
+  gap: 10px; /* Add spacing between buttons */
+}
+/* Open Chat Button */
+#open-chat-button {
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #6c5ce7, #4a4e69);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+#open-chat-button:hover {
+  background: linear-gradient(135deg, #4a4e69, #6c5ce7);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+}
+/* Chat Popup Styles */
+#chat-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#chat-popup.hidden {
+  display: none;
+}
+
+#chat-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #4a90e2;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+#chat-popup-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+#chat-popup-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#chat-popup-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 200px;
+  background: #f9f9f9;
+}
+
+#chat-popup-form {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+}
+
+#chat-popup-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#chat-popup-form button {
+  padding: 8px 12px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#chat-popup-form button:hover {
+  background: #357abd;
+}
+
+#emoji-picker-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}

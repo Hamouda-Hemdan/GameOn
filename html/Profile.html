@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - GameOn</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html" style="cursor: pointer">GameOn</a>
+      </div>
+      <nav id="header-nav">
+        <nav>
+          <a href="index.html">Main</a>
+          <a href="created-rooms.html">Created Rooms</a>
+          <a href="#" id="logout-link">Logout</a>
+        </nav>
+      </nav>
+    </header>
+    <div class="container">
+      <h2>Profile Management</h2>
+
+      <!-- Profile Picture Section -->
+      <div id="profile-picture-section">
+        <div id="profile-photo-container">
+          <img
+            id="profile-photo"
+            src="../assets/default-profile.png"
+            alt="Profile Photo"
+          />
+        </div>
+        <form id="upload-profile-picture-form">
+          <input type="file" id="profile-picture" accept="image/*" required />
+          <button type="submit" class="button-primary">Upload New Photo</button>
+        </form>
+      </div>
+
+      <!-- Profile Information Section -->
+      <div id="profile-info-section">
+        <h3>Your Profile</h3>
+        <div id="profile-data">
+          <p><strong>Name:</strong> <span id="profile-name-display"></span></p>
+          <p>
+            <strong>Email:</strong> <span id="profile-email-display"></span>
+          </p>
+          <p>
+            <strong>Phone Number:</strong>
+            <span id="profile-phone-display"></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Update Profile Form (Collapsible) -->
+      <div id="update-profile-section">
+        <button id="toggle-update-form" class="button-secondary">
+          Update Profile
+        </button>
+        <form id="profile-form" class="hidden">
+          <input type="text" id="profile-name" placeholder="Name" required />
+          <input type="tel" id="profile-phone" placeholder="Phone Number" />
+          <button type="submit" class="button-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <!-- Footer Links -->
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="community.html">Our Community</a>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div class="footer-copyright">
+          &copy; @2025 GameOn. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button (Floating) -->
+    <a href="#top" id="back-to-top" class="hidden">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="header.js"></script>
+    <script>
+      // JavaScript for Back to Top Button
+      document.addEventListener("DOMContentLoaded", () => {
+        const backToTopButton = document.getElementById("back-to-top");
+
+        // Show/hide the button based on scroll position
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            backToTopButton.classList.add("visible");
+          } else {
+            backToTopButton.classList.remove("visible");
+          }
+        });
+
+        // Smooth scroll to top when the button is clicked
+        backToTopButton.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default anchor behavior
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth", // Smooth scroll
+          });
+        });
+      });
+    </script>
+
+    <script src="../js/profile.js"></script>
+  </body>
+</html>
